@@ -1,0 +1,26 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+a { text-decoration: none;}
+
+header main nav footer article section aside {	display: block; }
+
+header, main, nav, footer { padding: 5px 15px; }
+
+main {
+	margin: 5px 15px;
+	border-radius: 5px;
+	border: 1px lightgray solid;
+}
+
+nav { background-color: lightblue;}
+
+footer { background-color: gray; }
+footer a { color: white; font-weight: normal; padding: 5px; }
+
+.footer { display: flex; flex-direction: row; justify-content: space-between; }
+.header { display: flex; flex-direction: row; justify-content: space-between; }
+

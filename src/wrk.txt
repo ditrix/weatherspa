@@ -1,0 +1,105 @@
+итак. имеем
+список городов, (используем координаты)
+
+2 варианта
+0. запросов в минуту  60
+1. погода сейчас              https://openweathermap.org/current
+2. прогноз 5 дн, шаг 3 часа 
+
+краматорск
+
+Ukrainian - ua
+широта-долг взяты отсюда  
+https://api.openweathermap.org/data/2.5/forecast?lat=48.72305&lon=37.55629&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+https://api.openweathermap.org/data/2.5/forecast?lat=48.72305&lon=37.55629&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+
+
+
+
+3. карта погоды
+4. метеостанции
+
+
+exmpl  погода в москве
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+в лондоне
+https://api.openweathermap.org/data/2.5/find?q=London&units=imperial&lang=ua&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+
+Ukrainian - ua
+Ukrainian - ua
+https://samples.openweathermap.org/data/2.5/forecast?lat=48.43&lon=22.98&appid=b6907d289e10d714a6e88b30761fae22
+
+                                                                                                                                                                                                   
+выдача (прогноз по городу 3 дня)
+
+{"cod":"200",
+	"message":0.0079,
+	"cnt":40,
+	"list":[
+		{	
+			"dt":1565805600,
+			"main":{
+			"temp":291.31,
+			"temp_min":291.31,
+			"temp_max":292.305,
+			"pressure":1012.84,
+			"sea_level":1012.84,
+			"grnd_level":990.44,
+			"humidity":76,"temp_kf":-1
+		},
+		"weather":[	{	"id":803,"main":"Clouds",	"description":"broken clouds","icon":"04n"}	],
+		"clouds":{"all":68},
+		"wind":{"speed":1.52,	"deg":94.491},
+		"sys":{	"pod":"n"	},
+		"dt_txt":"2019-08-14 18:00:00"
+		},
+		.....
+
+	{	"dt":1566226800,
+		"main":{
+		"temp":293.6, 
+		"temp_min":293.6,
+		"temp_max":293.6,
+		"pressure":1016.6,
+		"sea_level":1016.6,
+		"grnd_level":994.26,
+		"humidity":68,"temp_kf":0},
+		"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],
+		"clouds":{"all":49},
+		"wind":{"speed":2.57,"deg":338.141},
+		"sys":{"pod":"d"},
+	  "dt_txt":"2019-08-19 15:00:00"
+	}
+	],
+"city":{
+	"id":524901,
+	"name":"Moscow",
+	"coord":{"lat":55.7522,"lon":37.6156},
+	"country":"RU",
+	"timezone":10800,"sunrise":1565747917,"sunset":1565802613
+	}
+}
+
+
+exmpl  погода в москве
+http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+в лондоне
+https://samples.openweathermap.org/data/2.5/find?q=London&units=imperial&appid=b6907d289e10d714a6e88b30761fae22
+
+
+
+48.72305 37.55629
+
+&APPID=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+
+48°43'22.98" N 37°33'22.64" E
+
+
+
+https://openweathermap.org/data/2.5/forecast?id=524901&appid=b6907d289e10d714a6e88b30761fae22
