@@ -1,68 +1,37 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+SPA application for test myself
 
-In the project directory, you can run:
+Для тестового задания надо что-нибудь посложней. Простенький real world app.
 
-### `npm start`
+Например простенький Weather App:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Строка поиска городов(можно использовать например API Google):
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+2. Результат поиска с погодой.
 
-### `npm test`
+3. Список сохраненных городов.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Погода в текущей позиции.
 
-### `npm run build`
+Для погоды можно использовать API любого сервиса(например [OWM API] (https://openweathermap.org/api)). 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Такое приложение спроектировать сложней, тут помимо тупой работы с API библиотек придется проектировать.
+Можно использовать роутинг, а можно обойтись и без него. Да и целый ряд задач, над решением которых новичку придется хорошо подумать:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+1. Структура приложения
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Работа с API
 
-### `npm run eject`
+3. Реализация строки поиска
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Обработка исключений( нет связи, отклонили использование геолокации)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Верстка
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Когда такой проект начнет оживать и работать как задумано это, конечно, принесет человеку радость и уверенность в себе.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Так же можно реализовать Dashboard, но это посложней и требует серверной части или использование публичного тестового API вроде Star Wars API
+Еще можно реализовать простенький клиент для любого сервиса. Например поиски и проигрывание видео c Youtube.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ИМХО совсем простые задачи, конечно могут показать знание API той или иной библиотеки, но обладает ли кандидат навыками необходимыми для Junior Developer они не отразят. А Junior Developer должен уметь самостоятельно решить точно поставленную задачу с пояснениями и рекомендациями по пути ее решения. 
