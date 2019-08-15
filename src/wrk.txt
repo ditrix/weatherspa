@@ -1,3 +1,4 @@
+старт 2019 08014 
 итак. имеем
 список городов, (используем координаты)
 
@@ -10,7 +11,8 @@
 
 Ukrainian - ua
 широта-долг взяты отсюда  
-https://api.openweathermap.org/data/2.5/forecast?lat=48.72305&lon=37.55629&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+https://latitude.to/map/ua/ukraine/cities/kramatorsk
 
 https://api.openweathermap.org/data/2.5/forecast?lat=48.72305&lon=37.55629&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
 
