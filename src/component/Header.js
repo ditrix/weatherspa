@@ -1,9 +1,12 @@
 import React from 'react';
-
+import reactlogo from '../reactlogo.svg';
+import reduxlogo from '../reduxlogo.svg';
 export const Header = () => {
 	return(
-   	<div className="header">
-    	<h1>weather spa</h1>
-    </div> 		
+		<>
+			<h1>my spa</h1>
+      <img src={reactlogo} className="header-logo" alt="logo" />
+      <img src={reduxlogo} className="header-logo" alt="logo" />
+		</>
 	)
 }
