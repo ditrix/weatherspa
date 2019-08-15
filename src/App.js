@@ -1,7 +1,11 @@
 import React from 'react';
 
+
 import {Footer} from './component/Footer'
 import {Header} from './component/Header'
+import {Spinner} from './component/Spinner'
+
+import circles from './circles.svg'
 
 import './style.css';
 
@@ -13,6 +17,8 @@ function App() {
       </header>
       <nav><h5>nav</h5></nav> 
       <main>
+        <Spinner />        
+
         <h1>main</h1>
       </main>
       <footer>
