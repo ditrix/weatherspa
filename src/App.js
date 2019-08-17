@@ -7,7 +7,7 @@ import {Header} from './component/Header'
 import {Spinner} from './component/Spinner'
 
 import {actionWeather} from './action/actionWeather'
-
+import {actionForecast} from './action/actionForecast'
 
 import './style.css';
 
@@ -17,6 +17,7 @@ class App extends Component {
 
    
    this.props.getWeather()
+   this.props.getForecast()
   }
 
   componentDidMount(){
@@ -49,8 +50,18 @@ class App extends Component {
               <p>облачность:  {this.props.weather.data.weather[0].description} </p>
             </div>:
             (this.props.weather.error)? <span>error</span>: null }
-                  
-
+       <hr />           
+        { (this.props.forecast.loading)? <Spinner />:
+            (this.props.forecast.loaded)? 
+            <div>
+              <p>{this.props.forecast.data.message}</p>
+              <ul>
+              {this.props.forecast.data.list.map((item, index) =>
+                <li key={index}>{item.dt}</li>
+              )}
+              </ul>
+            </div>:
+            (this.props.forecast.error)? <span>error</span>: null }
      
         </main>
         <footer>
@@ -63,13 +74,15 @@ class App extends Component {
 
 const mapStateToProps = store => {
    return {
-    weather: store.weather
+    weather: store.weather,
+    forecast: store.forecast
    } 
 }
 
 const mapDispatchToProps = dispatch => {
   return{
     getWeather: () => dispatch(actionWeather()),
+    getForecast: () => dispatch(actionForecast()),
   }
 }
 

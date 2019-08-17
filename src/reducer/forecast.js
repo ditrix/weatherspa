@@ -1,18 +1,24 @@
 //  eslint-disable-next-line
-const GET_FORECAST_REQUEST = 'GET_FORECAST_REQUEST'
-//  eslint-disable-next-line
-const GET_FORECAST_SUCCESS = 'GET_FORECAST_SUCCESS'
-//  eslint-disable-next-line
-const GET_FORECAST_ERROR = 'GET_FORECAST_ERROR'
+import {GET_FORECAST_REQUEST, GET_FORECAST_SUCCESS, GET_FORECAST_ERROR} from '../constants'
 
 const initialState = {
 	result: null,
-	finded: false,
-	lat: '',
-	lon: '',
+	loaded: false,
+	loading: false,
+	error: false,
 	data: null
 }
 
 export const forecast = (state=initialState,action) => {
-	return state
+switch(action.type){
+		case GET_FORECAST_REQUEST:
+			return {...state,loading:true, loaded: false, data: null,error:false}
+		case GET_FORECAST_SUCCESS:
+			return {...state,loading:false,loaded:true,data: action.payload,error:false}
+		case GET_FORECAST_ERROR:
+			return {...state,loading:false, loaded:false, data: null,error:true}		
+		default:
+			return state	
+		}	
+	
 }

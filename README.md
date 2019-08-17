@@ -40,3 +40,4 @@ SPA application for test myself
 TODO: dashboard components
 weather
 forecast
+links
