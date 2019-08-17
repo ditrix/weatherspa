@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import {Footer} from './component/Footer'
 import {Header} from './component/Header'
 import {Spinner} from './component/Spinner'
+import Forecast from './component/Forecast'
 
 import {actionWeather} from './action/actionWeather'
 import {actionForecast} from './action/actionForecast'
@@ -21,7 +22,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-        console.log(this.props.weather)
+        //console.log(this.props.weather)
     
   }
 
@@ -35,12 +36,13 @@ class App extends Component {
             <div>
               <span>City:&nbsp;</span>
               <input type="text" defaultValue={"Краматорск"} onChange={()=> console.log('changed')} />
-              <button onClick={()=>console.log('get city')}>find</button>
+              <button  className="button-get-weather" onClick={()=>console.log('get city')}>find</button>
+              <button className="button-get-weather" onClick={this.handleButtonClick.bind(this)}>получить прогноз</button>
             </div>
 
         </nav> 
         <main>
-           <button onClick={this.handleButtonClick.bind(this)}>get weather</button>
+          
           { (this.props.weather.loading)? <Spinner />:
             (this.props.weather.loaded)? 
             <div>
@@ -51,18 +53,8 @@ class App extends Component {
             </div>:
             (this.props.weather.error)? <span>error</span>: null }
        <hr />           
-        { (this.props.forecast.loading)? <Spinner />:
-            (this.props.forecast.loaded)? 
-            <div>
-              <p>{this.props.forecast.data.message}</p>
-              <ul>
-              {this.props.forecast.data.list.map((item, index) =>
-                <li key={index}>{item.dt}</li>
-              )}
-              </ul>
-            </div>:
-            (this.props.forecast.error)? <span>error</span>: null }
-     
+  
+        <Forecast forecast={this.props.forecast} />
         </main>
         <footer>
           <Footer />
