@@ -7,7 +7,11 @@ const url = `https://api.openweathermap.org/data/2.5/weather?lat=48.72305&lon=37
 export const actionWeather = () => {
 	return dispatch => {
 		dispatch({type:GET_WEATHER_REQUEST})
+
+// 	for dev dataplay	
 //		dispatch({type:GET_WEATHER_SUCCESS,payload:weatherResponse})
+
+// for real get data
 		fetch(url)
 			.then(response => response.json())
 			.then(data=>  dispatch({type:GET_WEATHER_SUCCESS,payload:data}))

@@ -6,9 +6,11 @@ import {Footer} from './component/Footer'
 import {Header} from './component/Header'
 import {Spinner} from './component/Spinner'
 import Forecast from './component/Forecast'
+import City from './component/City'
 
 import {actionWeather} from './action/actionWeather'
 import {actionForecast} from './action/actionForecast'
+
 
 import './style.css';
 
@@ -33,17 +35,12 @@ class App extends Component {
           <Header /> 
         </header>
         <nav>
-            <div>
-              <span>City:&nbsp;</span>
-              <input type="text" defaultValue={"Краматорск"} onChange={()=> console.log('changed')} />
-              <button  className="button-get-weather" onClick={()=>console.log('get city')}>find</button>
-              <button className="button-get-weather" onClick={this.handleButtonClick.bind(this)}>получить прогноз</button>
-            </div>
-
+          <City />
+          <button className="button-get-weather nav-button" onClick={this.handleButtonClick.bind(this)}>получить прогноз</button>
         </nav> 
         <main>
-          
-          { (this.props.weather.loading)? <Spinner />:
+
+           { (this.props.weather.loading)? <Spinner />:
             (this.props.weather.loaded)? 
             <div>
               <p>{this.props.weather.data.name}</p>

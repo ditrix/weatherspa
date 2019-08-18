@@ -1,7 +1,12 @@
 import React from 'react';
-import spinner from '../spinner.svg'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+
 export const Spinner = () => {
 	return(
-		<img src={spinner} className="sinner" alt="spiner" /> 
+    <div className="awesome-spinner">
+      <FontAwesomeIcon  icon={faSpinner} size="3x" spin />
+    </div>
 	)
 }

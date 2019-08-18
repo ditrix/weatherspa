@@ -10,6 +10,10 @@ ul {
 	list-style: none;
 }
 
+.debug {
+	border: 1px red solid;
+}
+
 header main nav footer article section aside {	display: block; }
 
 header, main, nav, footer { padding: 5px 15px; }
@@ -33,10 +37,15 @@ main {
 	border: 1px lightgray solid;
 }
 
-nav { background-color: lightblue;}
+nav { background-color: lightblue;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
 
 footer { background-color: gray; }
 footer a { color: white; font-weight: normal; padding: 5px; }
+
 
 .footer { display: flex; flex-direction: row; justify-content: space-between; }
 
@@ -54,8 +63,42 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 .button-get-weather {
 	margin: 0 20px;
 	padding: 3px 10px;
+}
+
+
+.nav-button {
 	font-size: 1.06em;
 	background-color: inherit;	
 	border: 1px #3d7e9a solid;
-	border-radius: 5px;
+	border-radius: 5px;	
+}
+
+.search-form {
+	border: 1px #3d7e9a solid;
+	font-size: 1.26em;
+	display: flex;
+	flex-direction: row;
+
+}
+
+.search-form input {
+	margin: auto 0px;
+	height: 100%;
+	border: none;
+	width: 250px;
+	padding: 0 5px;
+}
+
+.search-button {
+	background-color: inherit;	
+	height: 100%;
+	padding: 0 5px;
+	
+	border: none;
+}
+
+.awesome-spinner {
+	color: #add8e6;
+	display: flex;
+	justify-content: center;	
 }
