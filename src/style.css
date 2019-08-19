@@ -78,7 +78,7 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 	font-size: 1.26em;
 	display: flex;
 	flex-direction: row;
-
+	justify-content: center;
 }
 
 .search-form input {
@@ -101,4 +101,10 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 	color: #add8e6;
 	display: flex;
 	justify-content: center;	
+}
+.search-form > .svg-inline--fa {
+	height: 0.8em;
+	width: 1.5em;
+	margin-top: 0.27em;
+	color: #3d7e9a;
 }

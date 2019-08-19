@@ -35,7 +35,7 @@ class App extends Component {
           <Header /> 
         </header>
         <nav>
-          <City />
+          <City city={''} />
           <button className="button-get-weather nav-button" onClick={this.handleButtonClick.bind(this)}>получить прогноз</button>
         </nav> 
         <main>
