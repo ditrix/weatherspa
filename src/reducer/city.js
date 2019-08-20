@@ -1,19 +1,19 @@
 //  eslint-disable-next-line
-export const SEARCH_CITY_REQUEST = 'SEARCH_CITY_REQUEST'
-export const SEARCH_CITY_SUCCESS = 'SEARCH_CITY_SUCCESS'
-export const CITY_NOT_FOUND = 'CITY_NOT_FOUND'
-export const SEARCH_CITY_ERROR = 'SEARCH_CITY_ERROR'
-
+import {GET_CITY,GET_WEATHER_SUCCESS} from '../constants'
 const initialState = {
-	result: null,
-	finded: false,
-	data: {
-		name: '',
-		lat: '',
-		lon: '',
-	}
+	city: ''
 }
 
 export const city = (state=initialState,action) => {
-	return state
+	console.log(action.type)
+	switch(action.type){
+		case GET_CITY:
+			return {...state,city: action.payload}
+		
+		case GET_WEATHER_SUCCESS:
+			return {...state, city: action.payload.name}
+
+		default:	
+			return state
+	}
 }

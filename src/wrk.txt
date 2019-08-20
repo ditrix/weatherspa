@@ -124,3 +124,46 @@ forecast request
 погода брется по широта-долгота.  данные из гугла (если не найду что-то еще)
 
 параметр icon  =  "03n" == https://openweathermap.org/img/wn/03n@2x.png
+
+для поиска города используем открытые апи
+приватбанк (список банкоматов)  https://api.privatbank.ua/#p24/atm
+нова пошта (поиск только на укр) https://devcenter.novaposhta.ua/docs/services/556d7ccaa0fe4f08e8f7ce43/operations/56248fffa0fe4f0da0550ea8
+
+приват банк
+запрос https://api.privatbank.ua/p24api/infrastructure?json&atm&address=&city=Bachmut
+ответ {"city":"Bachmut","address":"","devices":[]}
+
+https://api.privatbank.ua/p24api/infrastructure?json&atm&address=&city=Artemivsk
+ответ 
+	{"city":"Artemivsk","address":"",
+	"devices":[
+		{"type":"ATM",
+		 "cityRU":"Артемовск",
+		 "cityUA":"Артемiвськ",
+		 "cityEN":"Artemivsk",
+		 "fullAddressRu":"Украина,область Донецкая,район Артемовский,город Артемовск,улица Артема,дом 42",
+		 "fullAddressUa":"Украiна,область Донецька,район Артемiвський,мiсто Артемiвськ,вулиця Артема,будинок 42",
+		 "fullAddressEn":"Ukraine,area Donetska,district Artemivskyi,city Artemivsk,street Artema,building 42",
+		 "placeRu":"Отделение банка",
+		 "placeUa":"Вiддiлення анку",
+		 "latitude":"48.589786","longitude":"38.000293",
+		 "tw":{"mon":"00:00 - 23:59","tue":"00:00 - 23:59","wed":"00:00 - 23:59","thu":"00:00 - 23:59","fri":"00:00 - 23:59","sat":"00:00 - 23:59","sun":"00:00 - 23:59","hol":"00:00 - 23:59"}
+		 },
+...
+
+		 {"type":"ATM",
+		 "cityRU":"Артемовск","cityUA":"Артемiвськ","cityEN":"Artemivsk",
+		 "fullAddressRu":"Украина,область Донецкая,район Артемовский,город Артемовск,улица Чайковского,дом 101",
+		 "fullAddressUa":"Украiна,область Донецька,район Артемiвський,мiсто Артемiвськ,вулиця Чайковського,будинок 101",
+		 "fullAddressEn":"Ukraine,area Donetska,district Artemivskyi,city Artemivsk,street Chaikovskoho,building 101",
+		 "placeRu":"Аптека","placeUa":"Аптека","latitude":"48.576961","longitude":"37.964406",
+		 "tw":{"mon":"08:00 - 20:00","tue":"08:00 - 20:00","wed":"08:00 - 20:00","thu":"08:00 - 20:00","fri":"08:00 - 20:00","sat":"08:00 - 20:00","sun":"08:00 - 20:00","hol":"08:00 - 20:00"}
+		 }
+		 ]
+	}
+
+ebatory with city wery simple in result
+https://api.openweathermap.org/data/2.5/weather?q=KRAMATORSK&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+
+https://api.openweathermap.org/data/2.5/forecast?q=kramatorsk&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602
+внимательнее, бльд читай документацию

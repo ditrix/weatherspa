@@ -40,7 +40,7 @@ main {
 nav { background-color: lightblue;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: left;
 }
 
 footer { background-color: gray; }
@@ -78,16 +78,17 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 	font-size: 1.26em;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: left;
 }
 
 .search-form input {
 	margin: auto 0px;
 	height: 100%;
 	border: none;
-	width: 250px;
+	width: 300px;
 	padding: 0 5px;
 }
+
 
 .search-button {
 	background-color: inherit;	
@@ -103,8 +104,10 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 	justify-content: center;	
 }
 .search-form > .svg-inline--fa {
-	height: 0.8em;
+	height: 1.3em;
 	width: 1.5em;
-	margin-top: 0.27em;
+	margin-top: 0.2em;
+	margin-bottom:  0.2em;
 	color: #3d7e9a;
+
 }
