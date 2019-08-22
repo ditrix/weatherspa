@@ -20,11 +20,12 @@ class Forecast extends Component {
 						<span>{getDate(data.dt)}</span>
 						<span>{data.dt_txt}</span>
 						<span><img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt={' '} /></span>
-						<div><label>температура,°C:</label><span>{data.main.temp}</span></div>
+						<div><label>темп,°C:</label><span>{data.main.temp}</span></div>
 						<div><label>давл, мм.рт.ст.:</label><span>{data.main.pressure}</span></div>
-						<div><label>влажность:</label><span>{data.main.humidity}</span></div>
-						<div><label>ветер, м/с:</label><span>{data.wind.speed}</span></div>
-						<div><label>облачность:</label><span>{data.weather[0].description	}</span></div>
+						<div><label>влажн:</label><span>{data.main.humidity}</span></div>
+						<div><label>ветер, м/с:</label><span>{data.wind.speed}({data.wind.deg}%)</span></div>
+
+						<div><label>облачн:</label><span>{data.weather[0].description	}</span></div>
 						
 				
 					</div>	

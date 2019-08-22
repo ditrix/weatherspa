@@ -40,7 +40,7 @@ main {
 nav { background-color: lightblue;
 	display: flex;
 	flex-direction: row;
-	justify-content: left;
+	justify-content: space-around;
 }
 
 footer { background-color: gray; }
@@ -63,6 +63,10 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 .button-get-weather {
 	margin: 0 20px;
 	padding: 3px 10px;
+	font-size: 0.8em;
+		background-color: inherit;	
+	border: 1px #3d7e9a solid;
+	border-radius: 5px;	
 }
 
 

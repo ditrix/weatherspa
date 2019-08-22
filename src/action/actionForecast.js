@@ -9,8 +9,11 @@ import {forecastResponse} from '../devdata/responses'
 // майское
 //const url = `https://api.openweathermap.org/data/2.5/forecast?lat=48.486758&lon=35.629409&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
 
-export const actionForecast = (city = 'kramatorsk') => {
-	const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
+export const actionForecast = (city) => {
+	//const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
+	
+	const url = (city==='dz')? `https://api.openweathermap.org/data/2.5/forecast?lat=48.4861103&lon=35.628315&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
+								: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
 	return dispatch => {
 		dispatch({type:GET_FORECAST_REQUEST})
 

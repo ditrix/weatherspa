@@ -6,6 +6,8 @@ import {Footer} from './component/Footer'
 import {Header} from './component/Header'
 import {Spinner} from './component/Spinner'
 import Forecast from './component/Forecast'
+
+// eslint-disable-next-line
 import City from './component/City'
 
 import {actionWeather} from './action/actionWeather'
@@ -27,12 +29,15 @@ class App extends Component {
   }
 
   handleButtonClick(){
-
-
     this.props.getWeather(this.state.city)
-
     this.props.getForecast(this.state.city)
   }
+
+  handleButtonDZClick(){
+    this.props.getWeather('dz')
+    this.props.getForecast('dz') 
+  }
+
 
   handleInputCityCick(){
     console.log(this.state.city)
@@ -40,8 +45,15 @@ class App extends Component {
   }
   handleInputCityChange(e){  
     this.setState({city:e.currentTarget.value})
+
   }
 
+  handleKeyDown(e){
+    if(e.keyCode === 13){
+        e.preventDefault()
+        this.handleButtonClick()
+    }
+  }
   render(){
     return (
       <div className="container">
@@ -49,21 +61,16 @@ class App extends Component {
           <Header /> 
         </header>
         <nav>
-          {/*<City city={''} />*/}
-          
-
-          
-          <form className='search-form'>
+           <form className='search-form'>
             <FontAwesomeIcon icon={faSearch} onClick={this.handleButtonClick.bind(this)} />  
             <input type="text" 
               onClick={this.handleInputCityCick.bind(this)} 
+              onKeyDown={this.handleKeyDown.bind(this)}
               value={this.state.city} 
               placeholder="Search city..." 
               onChange={this.handleInputCityChange.bind(this)}  />
           </form>
-          
-
-
+           <button className="button-get-weather" onClick={this.handleButtonDZClick.bind(this)}>DZ(48.4861103,35.628315)</button> 
      {/*     <div>
             <input  type="text" placeholder="city..." 
               value={this.state.city}
