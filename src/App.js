@@ -55,6 +55,7 @@ class App extends Component {
     }
   }
   render(){
+
     return (
       <div className="container">
         <header> 
@@ -85,10 +86,15 @@ class App extends Component {
            { (this.props.weather.loading)? <Spinner />:
             (this.props.weather.loaded)? 
             <div>
+              {(this.props.weather.data.main)?
+                <>
               <p>{this.props.weather.data.name}</p>
               <p>температура {this.props.weather.data.main.temp}</p>
               <p>ветер:  {this.props.weather.data.wind.speed} </p>
               <p>облачность:  {this.props.weather.data.weather[0].description} </p>
+              </>
+              :<span>no data</span>
+              }
             </div>:
             (this.props.weather.error)? <span>error</span>: null }
        <hr />           

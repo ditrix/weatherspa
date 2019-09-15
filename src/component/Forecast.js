@@ -39,12 +39,16 @@ class Forecast extends Component {
 			<div>
 				{ (forecast.loading)? <Spinner />:
               (forecast.loaded)? 
-              <div>                
+              <div>
+              	{(forecast.data.list)? 
                 <ul>
                 {forecast.data.list.map((item, index) =>
                   <li key={index}>{this.ForecastTemplate(item)}</li>
                 )}
                 </ul>
+                : <span>no data</span>
+              	}
+
               </div>:
               (forecast.error)? <span>error</span>: null }
 
