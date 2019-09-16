@@ -63,10 +63,14 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 	flex-direction: row;
 	align-items: center;
 	border-bottom: 1px #add8e6 solid;
+	flex-wrap: wrap;
 }
 .forecast-row span {margin: 0 10px;}
 .forecast-row label {color: #3d7e9a;}
 .forecast-row img {width: 50px; height: auto;}
+
+.forecast-data span  {display: inline-block; border: 1px red solid; width: 75px; }
+
 
 .button-get-weather {
 	margin: 0 20px;
