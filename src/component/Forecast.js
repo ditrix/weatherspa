@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {Spinner} from './Spinner'
-import {forecastLocal} from '../devdata/forecastLocal'
+//import {forecastLocal} from '../devdata/forecastLocal'
 
-const getDate = (date) => {	
-	//const dateStr = new Date(date)	
-	return date 
+const getDate = (datestr) => {	
+	const datearr = datestr.split('-')
+	const res = datearr[2]+'.'+datearr[1]+'.'+datearr[0]
+	return res
 }
 
 class Forecast extends Component {
@@ -13,12 +14,10 @@ class Forecast extends Component {
 		this.ForecastTemplate = this.ForecastTemplate.bind(this)
 	}
 
-	ForecastTemplate(data){
-
-			return(					
+  ForecastRow(time,data){
+  	return(
 					<div className="forecast-row">
-						<span>{getDate(data.dt)}</span>
-						<span>{data.dt_txt}</span>
+						<span>{time}</span>
 						<span><img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt={' '} /></span>
 						<div className="forecast-data"><label>обл:</label><span>{data.weather[0].description	}</span></div>
 						<div className="forecast-data"><label>темп(°C):</label><span>{data.main.temp}</span></div>
@@ -28,34 +27,43 @@ class Forecast extends Component {
 							</div>
 						<div className="forecast-data"><label>влажн(%):</label><span>{data.main.humidity}</span></div>
 						<div className="forecast-data"><label>ветер(м/с):</label><span>{data.wind.speed}({data.wind.deg}%)</span></div>
+				</div>	
+		)
+  }
 
-						
-						
-				
-					</div>	
+	ForecastTemplate(index,data){
+			const dateFull = data.dt_txt.split(' ');
+			const time = dateFull[1]
+			const date = dateFull[0]
+	
+			if(time === '00:00:00' || index === 0){
+			return(
+				<>
+				<div className="forecast-row forecast-title">
+					 <h4>{getDate(date)}</h4>
+				</div>
+				{this.ForecastRow(time,data)}
+				</>
+			)}
+			return(					
+				this.ForecastRow(time,data)
 			)
 	}
 
 	render(){
 
-		const dt_str = '2019-09-16 18:00:00';
-		const dt_arr = dt_str.split(' ')[1]
-				
-
 		const forecast = this.props.forecast
-		const develop = forecastLocal;
+		//const develop = forecastLocal;
 		return(
 			<div>
 
-				<div>{dt_arr}</div>
-
-				{(develop)?	<ul>
+		{/*		{(develop)?	<ul>
         	{develop.list.map((item, index) =>
-						<li key={index}>{this.ForecastTemplate(item)}</li>
+						<li key={index}>{this.ForecastTemplate(index,item)}</li>
              )}
         </ul>
       	:<span></span>}
-
+*/}
 
 				{ (forecast.loading)? <Spinner />:
               (forecast.loaded)? 
@@ -63,7 +71,7 @@ class Forecast extends Component {
               	{(forecast.data.list)? 
                 <ul>
                 {forecast.data.list.map((item, index) =>
-                  <li key={index}>{this.ForecastTemplate(item)}</li>
+                  <li key={index}>{this.ForecastTemplate(index,item)}</li>
                 )}
                 </ul>
                 : <span>no data</span>

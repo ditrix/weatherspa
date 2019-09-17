@@ -69,7 +69,12 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 .forecast-row label {color: #3d7e9a;}
 .forecast-row img {width: 50px; height: auto;}
 
-.forecast-data span  {display: inline-block; border: 1px red solid; width: 75px; }
+.forecast-data span  {
+		display: inline-block; 
+		/*border: 1px red solid; */
+		
+		width: 120px;
+	}
 
 
 .button-get-weather {
@@ -125,5 +130,14 @@ footer a { color: white; font-weight: normal; padding: 5px; }
 	margin-top: 0.2em;
 	margin-bottom:  0.2em;
 	color: #3d7e9a;
+}
 
+.forecast-title {
+	background-color: lightblue;
+	text-align: center;
+	padding: 5px;
+}
+
+.forecast-title h4 {
+	margin: 0 auto;
 }

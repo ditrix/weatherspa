@@ -7,6 +7,7 @@ export const Header = () => {
 			<h1>MY SPA</h1>
       <img src={reactlogo} className="header-logo" alt="logo" />
       <img src={reduxlogo} className="header-logo" alt="logo" />
+      <span><i>Weather</i></span>
 		</>
 	)
 }

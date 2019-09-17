@@ -23,7 +23,7 @@ export const actionForecast = (city) => {
 // for real get data from server
 	fetch(url)
 			.then(response => response.json())
-			.then(data=>  {dispatch({type:GET_FORECAST_SUCCESS,payload:data}); console.log(data) })
+			.then(data=>  {dispatch({type:GET_FORECAST_SUCCESS,payload:data}); /*console.log(data) */})
 			.catch(error=>dispatch({type:GET_FORECAST_ERROR}))
 
 	}
