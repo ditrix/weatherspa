@@ -4,7 +4,9 @@ SPA application for test myself
 
 used: Ract, Redux,  WeatherServer (https://openweathermap.org/api)
 
-1. Строка поиска городов(можно использовать например API Google):
+
+demo  (http://ditrix.adr.com.ua/)
+
 
 2. Результат поиска с погодой.
 
@@ -23,7 +25,7 @@ used: Ract, Redux,  WeatherServer (https://openweathermap.org/api)
 
 5. Верстка
 
-TODO: dashboard components
+TODO: dashboard components /  search history
 
 weather forecast links
 
@@ -33,11 +35,4 @@ TODO:
 
 обработка полуночи 
 
-1 если проночь сначала выводим строку с датой
-
-2 красить фон строки 
-
-первый предпочтительнее, т.к. избавляемся от лишних колонок
-
-NB! сейчас фиктивные данные
 	
