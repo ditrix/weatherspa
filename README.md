@@ -4,35 +4,16 @@ SPA application for test myself
 
 used: Ract, Redux,  WeatherServer (https://openweathermap.org/api)
 
+[FontAwesome] (https://fontawesome.com/how-to-use/on-the-web/using-with/react)
 
-demo  (http://ditrix.adr.com.ua/)
-
-
-2. Результат поиска с погодой.
-
-3. Список сохраненных городов.  !!!!! 
-
-4. Погода в текущей позиции.
-
------------------------------- task
-1. Структура приложения
-
-2. Работа с API
-
-3. Реализация строки поиска
-
-4. Обработка исключений( нет связи, отклонили использование геолокации)
-
-5. Верстка
-
-TODO: dashboard components /  search history
-
-weather forecast links
-
-used: [FontAwesome] (https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+demo  (http://pogoda.ditrix.adr.com.ua/)
 
 TODO:
 
-обработка полуночи 
 
-	
+Погода в текущей GEO .
+
+Список ранее просмотренных  городов. 
+
+
+
