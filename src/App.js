@@ -38,6 +38,11 @@ class App extends Component {
     this.props.getForecast('dz') 
   }
 
+  handleButtonKramatorskClick(){
+   this.props.getWeather('kramatorsk')
+    this.props.getForecast('kramatorsk')  
+  }
+
 
   handleInputCityCick(){
     //console.log(this.state.city)
@@ -71,15 +76,8 @@ class App extends Component {
               placeholder="Search city..." 
               onChange={this.handleInputCityChange.bind(this)}  />
           </form>
-           <button className="button-get-weather" onClick={this.handleButtonDZClick.bind(this)}>DZ(48.4861103,35.628315)</button> 
-     {/*     <div>
-            <input  type="text" placeholder="city..." 
-              value={this.state.city}
-              onClick={this.handleInputCityCick.bind(this)}
-              onChange={this.handleInputCityChange.bind(this)}
-            />
-          <button className="button-get-weather nav-button" onClick={this.handleButtonClick.bind(this)}>GET FORECAST</button>
-          </div>*/}
+           <button className="button-get-weather" onClick={this.handleButtonKramatorskClick.bind(this)}>Kramatorsk</button> 
+           <button className="button-get-weather" onClick={this.handleButtonDZClick.bind(this)}>DZMayskoe(48.4861103,35.628315)</button> 
         </nav> 
         <main>
 
@@ -87,7 +85,7 @@ class App extends Component {
             (this.props.weather.loaded)? 
             <div>
               {(this.props.weather.data.main)?
-                <>
+              <>
               <p>{this.props.weather.data.name}</p>
               <p>температура {this.props.weather.data.main.temp}</p>
               <p>ветер:  {this.props.weather.data.wind.speed} </p>

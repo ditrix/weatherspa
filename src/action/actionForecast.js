@@ -13,7 +13,10 @@ export const actionForecast = (city) => {
 	//const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
 	
 	const url = (city==='dz')? `https://api.openweathermap.org/data/2.5/forecast?lat=48.4861103&lon=35.628315&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
-								: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
+								: 
+								(city==='kramatorsk')?`https://api.openweathermap.org/data/2.5/forecast?q=kramatorsk&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
+								:
+								`https://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ua&units=metric&appid=bb4f8b2e6d9a8b9c9d3d77979bf6e602`
 	return dispatch => {
 		dispatch({type:GET_FORECAST_REQUEST})
 
