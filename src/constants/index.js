@@ -1,4 +1,4 @@
-export const OWMAPI_KEY = 'bb4f8b2e6d9a8b9c9d3d77979bf6e602'
+export const OWMAPI_KEY = `${process.env.REACT_APP_OWMAPI_KEY}`
 
 export const GET_WEATHER_REQUEST = 'GET_WEATHER_REQUEST'
 export const GET_WEATHER_SUCCESS = 'GET_WEATHER_SUCCESS'
