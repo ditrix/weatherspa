@@ -1,19 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ABOUT PROJECT:
+spa application for test myself
 
-SPA application for test myself
-
-used: Ract, Redux,  WeatherServer (https://openweathermap.org/api)
+used: Ract, Redux, CreateReactApp   
 
 [FontAwesome] (https://fontawesome.com/how-to-use/on-the-web/using-with/react)
 
+[WeatherServer] (https://openweathermap.org/api)
+
+
 demo  (http://pogoda.ditrix.adr.com.ua/)
 
-TODO:
-
-
-Погода в текущей GEO .
-
-Список ранее просмотренных  городов. 
 
 
 
