@@ -5,7 +5,7 @@ const initialState = {
 }
 
 export const city = (state=initialState,action) => {
-	//console.log(action.type)
+
 	switch(action.type){
 		case GET_CITY:
 			return {...state,city: action.payload}

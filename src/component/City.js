@@ -14,10 +14,6 @@ class City extends Component {
 		this.setState({city:e.currentTarget.value})
 	}
 
-	handleSearchClicked(){		
-		console.log(this.state.city)
-	}
-
 	handleInputClicked(){
 		this.setState({city:''})
 	}
@@ -25,7 +21,7 @@ class City extends Component {
 	render(){
 		return(
 			 <form className='search-form'>
-			 	 <FontAwesomeIcon icon={faSearch} onClick={this.handleSearchClicked.bind(this)} />	
+			 	 <FontAwesomeIcon icon={faSearch} />	
 	       <input type="text" onClick={this.handleInputClicked.bind(this)} value={this.state.city} placeholder="Search city..." onChange={this.handleInputCityChanged.bind(this)}  />
 			</form>
 		)

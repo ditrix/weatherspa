@@ -45,7 +45,6 @@ class App extends Component {
 
 
   handleInputCityCick(){
-    //console.log(this.state.city)
     this.setState({city:''})
   }
   handleInputCityChange(e){  

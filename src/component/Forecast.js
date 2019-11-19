@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Spinner} from './Spinner'
-//import {forecastLocal} from '../devdata/forecastLocal'
 
 const getDate = (datestr) => {	
 	const datearr = datestr.split('-')
@@ -57,13 +56,6 @@ class Forecast extends Component {
 		return(
 			<div>
 
-		{/*		{(develop)?	<ul>
-        	{develop.list.map((item, index) =>
-						<li key={index}>{this.ForecastTemplate(index,item)}</li>
-             )}
-        </ul>
-      	:<span></span>}
-*/}
 
 				{ (forecast.loading)? <Spinner />:
               (forecast.loaded)? 
