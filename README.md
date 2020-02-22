@@ -10,6 +10,6 @@ used: Ract, Redux, CreateReactApp
 
 demo  (http://pogoda.ditrix.adr.com.ua/)
 
-
+http://sypexgeo.net/ru/api/  
 
 
