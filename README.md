@@ -8,8 +8,10 @@ used: Ract, Redux, CreateReactApp
 [WeatherServer] (https://openweathermap.org/api)
 
 
-demo  (http://pogoda.dmvoloshin.adr.com.ua/)
+demo  (http://pogoda.ditrix.adr.com.ua/)
 
 http://sypexgeo.net/ru/api/  
+
+
 
 
