@@ -37,12 +37,12 @@ class Forecast extends Component {
 	
 			if(time === '00:00:00' || index === 0){
 			return(
-				<>
+				<div>
 				<div className="forecast-row forecast-title">
 					 <h4>{getDate(date)}</h4>
 				</div>
 				{this.ForecastRow(time,data)}
-				</>
+				</div>
 			)}
 			return(					
 				this.ForecastRow(time,data)

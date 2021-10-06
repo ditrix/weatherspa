@@ -84,12 +84,12 @@ class App extends Component {
             (this.props.weather.loaded)? 
             <div>
               {(this.props.weather.data.main)?
-              <>
+              <div>
               <p>{this.props.weather.data.name}</p>
               <p>температура {this.props.weather.data.main.temp}</p>
               <p>ветер:  {this.props.weather.data.wind.speed} </p>
               <p>облачность:  {this.props.weather.data.weather[0].description} </p>
-              </>
+              </div>
               :<span>no data</span>
               }
             </div>:
