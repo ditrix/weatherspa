@@ -75,7 +75,7 @@ class App extends Component {
               placeholder="Search city..." 
               onChange={this.handleInputCityChange.bind(this)}  />
           </form>
-           <button className="button-get-weather" onClick={this.handleButtonKramatorskClick.bind(this)}>Kramatorsk</button> 
+{/*            <button className="button-get-weather" onClick={this.handleButtonKramatorskClick.bind(this)}>Kramatorsk</button> */}
            <button className="button-get-weather" onClick={this.handleButtonDZClick.bind(this)}>DZMayskoe(48.4861103,35.628315)</button> 
         </nav> 
         <main>
